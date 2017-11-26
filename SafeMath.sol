@@ -1,4 +1,4 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.18;
 
 /* taking ideas from FirstBlood token */
 contract SafeMath {
