@@ -12,7 +12,9 @@ contract QRC20Token is SafeMath {
     // you need change the following three values
     string public constant name = 'QRC TEST';
     string public constant symbol = 'QTC';
-    uint256 public totalSupply = 10**9*10**decimals; //you need multiply 10^decimals by your real total supply
+    //Default assumes totalSupply can't be over max (2^256 - 1).
+    //you need multiply 10^decimals by your real total supply.
+    uint256 public totalSupply = 10**9*10**decimals;
 
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
@@ -59,8 +61,6 @@ contract QRC20Token is SafeMath {
     validAddress(_spender)
     returns (bool success)
     {
-        // if the allowance isn't 0, it can only be updated to 0 to prevent an allowance change immediately after withdrawal
-        require(_value == 0 || allowance[msg.sender][_spender] == 0);
         allowance[msg.sender][_spender] = _value;
         Approval(msg.sender, _spender, _value);
         return true;
