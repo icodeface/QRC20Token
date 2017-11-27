@@ -14,7 +14,7 @@ contract QRC20Token is SafeMath {
     string public constant symbol = 'QTC';
     //Default assumes totalSupply can't be over max (2^256 - 1).
     //you need multiply 10^decimals by your real total supply.
-    uint256 public totalSupply = 10**9*10**decimals;
+    uint256 public totalSupply = 10**9 * 10**decimals;
 
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
