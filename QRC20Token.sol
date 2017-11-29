@@ -7,14 +7,14 @@ import './SafeMath.sol';
 */
 contract QRC20Token is SafeMath {
     string public constant standard = 'Token 0.1';
-    uint256 public constant decimals = 8; // it's recommended to set decimals to 8 in QTUM
+    uint8 public constant decimals = 8; // it's recommended to set decimals to 8 in QTUM
 
     // you need change the following three values
     string public constant name = 'QRC TEST';
     string public constant symbol = 'QTC';
     //Default assumes totalSupply can't be over max (2^256 - 1).
     //you need multiply 10^decimals by your real total supply.
-    uint256 public totalSupply = 10**9 * 10**decimals;
+    uint256 public totalSupply = 10**9 * 10**uint256(decimals);
 
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
