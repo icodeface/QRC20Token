@@ -7,7 +7,7 @@ you need change the value of name、symbol and totalSupply in QRC20Token.sol bef
 
 ## Deploy and call
 
-refer to [sparknet-guide](https://github.com/qtumproject/qtum/blob/master/doc/sparknet-guide.md)
+refer to [qrc20-guide](https://github.com/qtumproject/documents/blob/master/zh/QRC20Token.md)
 
 
 ## Operation examples
