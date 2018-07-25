@@ -7,7 +7,7 @@ you need change the value of name、symbol and totalSupply in QRC20Token.sol bef
 
 ## Deploy and call
 
-refer to [qrc20-guide](https://github.com/qtumproject/documents/blob/master/zh/QRC20Token.md)
+refer to [QRC20-Token-Introduce.md](https://github.com/qtumproject/documents/blob/master/en/QRC20-Token-Introduce.md)
 
 
 ## Operation examples
