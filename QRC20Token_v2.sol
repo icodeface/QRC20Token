@@ -34,10 +34,10 @@ contract QRC20Token is SafeMath {
         _;
     }
 
-    function name() public constant returns (string name) { name; }
-    function symbol() public constant returns (string symbol) { symbol; }
-    function decimals() public constant returns (uint8 decimals) { decimals; }
-    function totalSupply() public constant returns (uint256 totalSupply) { totalSupply; }
+    function name() public constant returns (string _name) { return name; }
+    function symbol() public constant returns (string _symbol) { return symbol; }
+    function decimals() public constant returns (uint8 _decimals) { return decimals; }
+    function totalSupply() public constant returns (uint256 _totalSupply) { return totalSupply; }
 
     function transfer(address _to, uint256 _value)
     public
